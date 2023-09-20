@@ -18,7 +18,7 @@ conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 -c pytorch
 Download required datasets and checkpoints [here](https://drive.google.com/file/d/1qHMyqR1GEGqRcLorB1YQfF-ALCyUmp1f/view?usp=drive_link). After downloading, extract the zip file and place the subfolders in `data/`
 
 ## Pre-trained Image Classification Models
-Checkpoints for pre-trained image classification models are provided [here](). Download and extract the zip file. Place the subfolders in the `ckpts/` folder.
+Checkpoints for pre-trained image classification models are provided [here](https://drive.google.com/file/d/1jm9guS9VnSj6JIIVCDD4f8eDpUbMj1Sb/view?usp=drive_link). Download and extract the zip file. Place the subfolders in the `ckpts/` folder.
 The accuracies for the different pretrained models are enumerated below (this is also available in the appendix of our paper):
 |  	| **Caltech101** 	| **CIFAR10** 	| **CUB200** 	| **EuroSAT** 	| **Oxford102** 	|
 |---	|---	|---	|---	|---	|---	|
