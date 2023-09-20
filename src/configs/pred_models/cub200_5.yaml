@@ -1,0 +1,38 @@
+train_batch_size: 32
+test_batch_size: 32
+# num_workers: 8
+dataset: 'cub200'
+datapath: ''
+out_dir: '../ckpts'
+
+# model: "iBOT_Swin_T_14" # choices: "ResNet50", "ViT_B_16", DINO_ViT_B_16, DINO_ResNet50, MoCov3_ResNet50, MoCov3_ViT_B_16, iBOT_ViT_B_16, Swin_T_14, iBOT_Swin_T_14
+model_names: [
+  # "convnext_small",
+  "SparK_convnext_small",
+  # "ResNet50",
+  # "ViT_B_16",
+  # "DINO_ViT_B_16",
+  # "DINO_ResNet50",
+  # "MoCov3_ResNet50",
+  # "MoCov3_ViT_B_16",
+  # "iBOT_ViT_B_16",
+  # "Swin_T_14",
+  # "iBOT_Swin_T_14",
+  # "VGG16",
+  # "DenseNet121",
+]
+model_kwargs:
+  num_classes: 200
+
+grad_clip: 0.1
+pred_module:
+  optimizer: SGD
+  lr: 0.001
+  momentum: 0.85
+  weight_decay: 0.0001
+
+trainer:
+  gpus: 1
+  num_nodes: 1
+  max_epochs: 100
+  ckpt_interval_pct: 0.10 # percentage of total number of epochs to save checkpoint (e.g., 0.10 with 5 epochs means to save every epoch)

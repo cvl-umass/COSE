@@ -1,0 +1,19 @@
+method: 'gradcamPP'
+test_batch_size: 1
+# num_workers: 8
+dataset: 'cub200'
+datapath: ''
+
+out_dir: '../outputs/gradcamPP'
+config_dir: "configs/gradcamPP"
+random_seed: 0
+num_classes: 200
+idx2label: []   # will load labels from file
+to_append_results: False   # set to True to append results to existing csv
+to_save_imgs: True   # set to True to save results in out_dir
+
+start_idx: 0  # NOTE: indexing starts from 0
+end_idx: 500  # NOTE: indexing starts from 0
+mag_per_transform: 6
+
+transform_types: ["random", "mid_ckpt", "TranslateX", "TranslateY", "Rotate", "Brightness", "Color", "Contrast", "Sharpness", "AutoContrast", "Equalize", "FlipLR", "FlipUD", "Blur", "Smooth"]
