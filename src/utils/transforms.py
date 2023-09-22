@@ -39,7 +39,8 @@ def get_reverse_affine_explanations(rotated_explanation, rotated_ones_mask, rot_
 def get_similarity(explanation, t_explanation, method="ssim", mask=None):
     if method == "ssim":
         # Window size to 5 following "Sanity Checks for Saliency Maps"
-        ssim_val, ssim_full = ssim(explanation, t_explanation, win_size=5, full=True)
+        drange = max(t_explanation.max() - t_explanation.min(), explanation.max() - explanation.min())
+        ssim_val, ssim_full = ssim(explanation, t_explanation, win_size=5, full=True, data_range=drange)
         if mask is not None:
             # Erode the mask to only use areas which have no invalid pixels
             mask = binary_erosion(mask, footprint=np.ones((5, 5)))
