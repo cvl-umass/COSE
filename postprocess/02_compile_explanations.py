@@ -133,7 +133,7 @@ if __name__ == "__main__":
     start_idx = 0
     summarized_results = []
     for saliency_method in SALIENCY_METHODS:
-        if saliency_method in ["lime", "blur_ig", "smoothgrad"]:
+        if saliency_method in ["lime", "blur_ig", "smoothgrad", "guided_ig"]:
             end_idx = 50
         else:
             end_idx = 500
