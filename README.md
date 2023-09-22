@@ -15,7 +15,7 @@ conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 -c pytorch
 3. Install additional packages with: `pip install -r requirements.txt`
 
 ## Downloading Required Datasets and Checkpoints
-Download required datasets and checkpoints [here](https://drive.google.com/file/d/1qHMyqR1GEGqRcLorB1YQfF-ALCyUmp1f/view?usp=drive_link). After downloading, extract the zip file and place the subfolders in `data/`
+Download required datasets and checkpoints [here](https://drive.google.com/file/d/1AI2ZBOBUD6M860UpxfmQ8nMAGVCTuMdt/view?usp=sharing). After downloading, extract the zip file and place the subfolders in `data/`
 
 ## Pre-trained Image Classification Models
 Checkpoints for pre-trained image classification models are provided [here](). Download and extract the zip file. Place the subfolders in the `ckpts/` folder.
